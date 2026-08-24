@@ -3,7 +3,7 @@ region = "us-east-1"
 }
 
 resource "aws_instance" "one" {
-count = 0
+count = 3
 ami = "ami-0b6d9d3d33ba97d99"
 instance_type = "c7i.xlarge"
 key_name = "mykeypair"
