@@ -16,3 +16,4 @@ Name = var.instance_names[count.index]
 variable "instance_names" {
 default = ["jenkins", "APPSERVER-1", "Monitoring server"]
 }
+
