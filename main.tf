@@ -3,16 +3,16 @@ region = "us-east-1"
 }
 
 resource "aws_instance" "one" {
-count = 4
-ami = "ami-04aa00acb1165b32a"
+count = 3
+ami = "ami-0b6d9d3d33ba97d99"
 instance_type = "t2.medium"
-key_name = "argocd"
-vpc_security_group_ids = ["sg-06785bc60f40dceda"]
+key_name = "mykeypair"
+vpc_security_group_ids = ["sg-0ecaecbf03be6183e"]
 tags = {
 Name = var.instance_names[count.index]
 }
 }
 
 variable "instance_names" {
-default = ["jenkins", "APPSERVER-1", "APPSERVER-2", "Monitoring server"]
+default = ["jenkins", "APPSERVER-1", "Monitoring server"]
 }
